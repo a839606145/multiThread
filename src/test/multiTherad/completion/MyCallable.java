@@ -13,7 +13,7 @@ public class MyCallable implements Callable<String>{
 	public String call() throws Exception {
 		int i=1;
 		Thread.sleep(3000);
-		if(i==1){
+		if(Thread.currentThread().isInterrupted()){
 			throw new Exception("Å×³öÒì³£");
 		}
 		return userName;

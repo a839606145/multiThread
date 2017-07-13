@@ -81,6 +81,9 @@ import java.util.concurrent.Executors;
  *   实现RejectedExecutionHandler 接口
  *  Execute执行如果要捕获异常，需要线程设置捕获异常及 setUncaugthExecptionHandler
  *  
+ *  ExecutorService
+ *  方法：invokeAny() 得到第一个结果后，其他的线程可以继续执行 也可以不执行
+ *      invokeAll() 得到所有的结果后
  *  
  *  
  *    
