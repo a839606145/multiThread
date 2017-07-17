@@ -5,7 +5,13 @@ import java.util.concurrent.RecursiveTask;
 public class RecursiveTaskTest extends RecursiveTask{
 
 	protected String compute() {
-		System.out.println("helo");
+		try {
+			System.out.println(Thread.currentThread().getName()+": beigin: "+System.currentTimeMillis());
+			Thread.sleep(1000);
+			System.out.println(Thread.currentThread().getName()+": end: "+System.currentTimeMillis());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return "hello";
 	}
 
